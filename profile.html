@@ -14,6 +14,49 @@
         img {
             margin: 5px;
         }
+
+        .progress-title{
+            font-size: 18px;
+            font-weight: 700;
+            color: #1c2647;
+            margin: 0 0 10px;
+        }
+        .progress{
+            height: 30px;
+            background: #fff;
+            border-top: 5px solid #1c2647;
+            border-bottom: 5px solid #1c2647;
+            border-radius: 0;
+            margin-bottom: 25px;
+            overflow: visible;
+            position: relative;
+        }
+        .progress:before,
+        .progress:after{
+            content: "";
+            width: 5px;
+            background: #1c2647;
+            position: absolute;
+            top: 0;
+            left: -5px;
+            bottom: 0;
+        }
+        .progress:after{
+            left: auto;
+            right: -5px;
+        }
+        .progress .progress-bar{
+            border: none;
+            box-shadow: none;
+            -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+            animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+        }
+        @-webkit-keyframes animate-positive{
+            0%{ width: 0; }
+        }
+        @keyframes animate-positive{
+            0%{ width: 0; }
+        }
     </style>
   </head>
   <body>
@@ -92,6 +135,41 @@
         <div class="ratio ratio-16x9">
             <iframe src="https://www.youtube.com/embed/JI9wog6XqwI?autoplay=1&mute=1" title="Japan!" allowfullscreen></iframe>
         </div>
+    </div>
+
+    <div class="container w-50 mx-auto my-5 p-4 text-center" style="border-top:3px dotted pink; border-bottom:3px dotted pink;">
+      <h1>My Skills</h1>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h3 class="progress-title">Java - 85%</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped active" style="width:85%;"></div>
+            </div>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <h3 class="progress-title">C - 80%</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped active" style="width:80%;"></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h3 class="progress-title">HTML5 - 70%</h3>
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped active" style="width:70%;"></div>
+            </div>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <h3 class="progress-title">CSS3 - 70%</h3>
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped active" style="width:70%;"></div>
+            </div>
+        </div>
+      </div>
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
